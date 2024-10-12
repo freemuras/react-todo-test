@@ -49,24 +49,29 @@
 
 ## 제출 방법
 
-1. 이 레포지토리를 클론합니다.
+1. 이 레포지토리를 각자 계정으로 fork합니다.
+    <img width="1497" alt="fork1" src="https://github.com/user-attachments/assets/edd3c054-e2d8-4bdd-9b0a-a457174ae33e">
+    <img width="782" alt="fork2" src="https://github.com/user-attachments/assets/57b983e5-9156-40e3-a530-54616b00bcdc">
+
+
+3. 자신의 계정에 생성된 fork 버전을 로컬 저장소에 클론합니다.
 
 ```bash
-git clone https://github.com/bbanderson/react-todo-test.git
+git clone https://github.com/{myGithubId}/react-todo-test.git
 ```
 
-2. 필요한 패키지를 설치합니다.
+3. 필요한 패키지를 설치합니다.
 
 ```bash
 npm install
 ```
 
-3. 개발 서버를 띄워놓고 개발합니다.
+4. 개발 서버를 띄워놓고 개발합니다.
 
 ```bash
 npm start
 ```
 
-4. 개발한 내용을 틈틈이 git 커밋으로 제대로 기록하시고, 푸시해주세요.
+5. 개발한 내용을 틈틈이 git 커밋으로 제대로 기록하시고, 푸시해주세요.
 
-5. 제가 github에서 코드 및 커밋 내역을 보고 평가합니다.
+6. 제가 github에서 코드 및 커밋 내역을 보고 평가합니다.
