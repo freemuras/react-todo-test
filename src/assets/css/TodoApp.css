@@ -1,0 +1,23 @@
+.todo-list {
+    flex: 1;
+    padding: 20px 32px;
+    padding-bottom: 60px;
+    overflow-y: auto;
+}
+
+.text {
+    flex: 1;
+    font-size: 35px;
+    color: #495057;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed black;;
+}
+
+.div {
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width : 450px;
+    height : 600px;
+  }
