@@ -1,0 +1,42 @@
+.add-button {
+  background-color: #fff;
+  width: calc(2.5em / 0.7); /* 버튼의 너비 설정 */
+  height: calc(2.5em / 0.7); /* 버튼의 높이 설정 */
+  display: flex;
+  gap: 5px; /* 버튼 내 아이템 간의 간격 설정 */
+  border-radius: 50%; /* 둥근 버튼 형태 */
+  justify-content: center; /* 아이템 가로 중앙 정렬 */
+  align-items: center; /* 아이템 세로 중앙 정렬 */
+  box-shadow: 2px 2px 5px rgb(193, 193, 193); /* 그림자 추가 */
+}
+
+.insert-form {
+  background: #ffeb3b; /* 폼 배경색 설정 */
+  padding: 3px; /* 폼 내 여백 설정 */
+  border-top: 1px solid #e9ecef; /* 상단 경계선 */
+  display: flex; /* flexbox 사용 */
+  justify-content: space-between; /* 버튼 간의 간격 설정 */
+}
+
+.create-body {
+  background-color: #ffeb3b; /* 배경색 설정 */
+  color: #ffeb3b; /* 글자 색상 설정 (이 경우 의미 없음) */
+  display: flex; /* flexbox를 사용하여 아이템을 세로로 배치 */
+  flex-direction: column; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center; /* 세로 방향 가운데 정렬 */
+  width: 450px; /* 너비 설정 */
+  height: 50px; /* 높이 설정 (필요에 따라 조정) */
+  padding: 10px; /* 여백 설정 */
+  border-radius: 8px; /* 둥글게 */
+  margin-bottom: 8px; /* 아래쪽 여백 */
+}
+.input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+  width: 300px;
+  outline: none;
+  font-size: 18px;
+  box-sizing: border-box;
+}

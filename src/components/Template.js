@@ -1,10 +1,8 @@
-import React from 'react'
-import '../assets/css/Template.css'
+import React, { Children } from "react";
+import "../assets/css/Template.css";
 
-const Template = () => {
-  return (
-    <div className='Template'></div> 
-  )
-}
+const Template = ({ children }) => {
+  return <div className="template">{children}</div>;
+};
 
 export default Template;

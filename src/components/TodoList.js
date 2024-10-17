@@ -1,20 +1,22 @@
-import React from 'react'
-import TodoItem from './TodoItem'
-import useTodoStore from '../store/useTodoStore';
+import React from "react";
+import "../assets/css/Todobody.css";
+import useTodoStore from "../store/useTodoStore";
+import TodoItem from "./TodoItem";
 
 function TodoList() {
   const { todos } = useTodoStore();
-  console.log(todos)
   return (
-    <div>
-    <h2>할 일 목록</h2>
-    <ul>
-        {todos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} />
-        ))}
-    </ul>
-</div>
-  )
+    <div className="todo-item">
+      {todos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          id={todo.id}
+          text={todo.text}
+          done={todo.done}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default TodoList;

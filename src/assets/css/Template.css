@@ -1,12 +1,11 @@
-.Template {
-    width : 500px;
-    height : 750px;
-    background : rgb(105, 108, 101);
-    position : relative;
-    border-radius: 15px;
-    margin : 0 auto;
-    margin-top : 100px;
-    margin-bottom : 30px;
-    display: flex;
-    flex-direction : column;
+.template {
+  background-color: #000;
+  width: 500px;
+  height: 750px;
+  position: relative;
+  border-radius: 15px;
+  margin: 0 auto; /* 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

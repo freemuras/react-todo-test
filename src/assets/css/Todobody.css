@@ -1,0 +1,47 @@
+.todo-item {
+  background-color: #ffeb3b;
+  color: #000;
+  display: flex; /* flexbox를 사용하여 아이템을 가로로 배치 */
+  flex-wrap: wrap; /* 아이템이 가로 공간을 넘어가면 다음 줄로 넘어가게 설정 */
+  justify-content: space-between; /* 아이템 사이에 공간을 균일하게 분배 */
+  width: 450px;
+  height: auto;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-text {
+  text-align: left;
+  font-size: 18px;
+  flex: 1;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+.todo-buttons {
+  background-color: #fff;
+  width: calc(2.5em / 0.7);
+  height: calc(2.5em / 0.7);
+  display: flex;
+  gap: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgb(193, 193, 193);
+}
+
+.input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+  width: 150px;
+  margin-right: 10px;
+  outline: none;
+  font-size: 18px;
+  box-sizing: border-box;
+}
