@@ -9,39 +9,42 @@ const TodoItem = ({ id, text, done }) => {
   const [newText, setNewText] = useState(text); // 입력할 새 텍스트
   const onUpdate = () => updateTodo(id);
   const onDelete = () => removeTodo(id);
-  const onCorrect = () => {
+  const onCorrect = (e) => {
+    e.preventDefault();
     correctTodo(id, newText);
     setTextEditer(false); //수정을 다하고나면 다시 false로 변경을 하여 닫힘
   };
 
   return (
     <div className="todo-item">
-      <button className="todo-buttons" onClick={onUpdate}>
-        {done ? "완료" : "미완"}
-      </button>
       {/** onupdate(updateTodo에 id 매게 변수를 넣어 실행)
        * 값은 done의 값이 true인 경우는 "완료", false인 값은 "미완"으로 표시
        */}
       {textEditer ? (
         <>
-          <input
-            type="text"
-            value={newText}
-            onChange={(e) => setNewText(e.target.value)} // 입력 변경 시 상태 업데이트
-            className="input"
-          />
-          <button className="todo-buttons" onClick={onCorrect}>
-            저장
-          </button>
-          <button
-            className="todo-buttons"
-            onClick={() => setTextEditer(false)} // 수정 모드 종료
-          >
-            취소
-          </button>
+          <form onSubmit={onCorrect} className="insert-form">
+            <input
+              className="input"
+              type="text"
+              value={newText}
+              onChange={(e) => setNewText(e.target.value)} // 입력 변경 시 상태 업데이트-
+            />
+            <button className="todo-buttons" onClick={onCorrect}>
+              저장
+            </button>
+            <button
+              className="todo-buttons"
+              onClick={() => setTextEditer(false)} // 수정 모드 종료
+            >
+              취소
+            </button>
+          </form>
         </>
       ) : (
         <>
+          <button className="todo-buttons" onClick={onUpdate}>
+            {done ? "완료" : "미완"}
+          </button>
           <div className="todo-text">{text}</div>
           <button className="todo-buttons" onClick={() => setTextEditer(true)}>
             수정
