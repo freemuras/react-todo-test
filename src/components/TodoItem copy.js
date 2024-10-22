@@ -1,39 +1,18 @@
 import React, { useState } from "react";
 import "../assets/css/Todobody.css";
 import useTodoStore from "../store/useTodoStore";
-import {
-  correctTodo,
-  fetchTodos,
-  removeTodo,
-  updateTodo,
-} from "../service/api";
 
 const TodoItem = ({ id, text, done }) => {
-  const [textEditer, setTextEditer] = useState(false); // 수정 모드를 나타내는 상태 변수 (true: 수정 중, false: 일반 모드)
-  const [newText, setNewText] = useState(text); // 입력할 새로운 텍스트를 저장하는 상태 변수, 초기값은 기존의 텍스트
-  const { setTodos } = useTodoStore(); // Zustand에서 제공하는 setTodos 함수 가져오기
+  const { updateTodo, removeTodo, correctTodo } = useTodoStore();
 
-  // 할 일 업데이트 함수
-  const onUpdate = async () => {
-    await updateTodo(id, done); // 현재 할 일을 업데이트 (완료/미완료 상태 변경)
-    const result = await fetchTodos(); // 업데이트된 할 일 목록을 가져옴
-    setTodos(result); // 상태를 업데이트하여 UI에 반영
-  };
-
-  // 할 일 삭제 함수
-  const onDelete = async () => {
-    await removeTodo(id); // 주어진 id의 할 일을 삭제
-    const result = await fetchTodos(); // 삭제 후 업데이트된 할 일 목록을 가져옴
-    setTodos(result); // 상태를 업데이트하여 UI에 반영
-  };
-
-  // 할 일 수정 함수
-  const onCorrect = async (e) => {
-    e.preventDefault(); // 폼 제출 시 페이지 새로 고침 방지
-    await correctTodo(id, newText); // 주어진 id의 할 일을 newText로 수정
-    const result = await fetchTodos(); // 수정 후 업데이트된 할 일 목록을 가져옴
-    setTodos(result); // 상태를 업데이트하여 UI에 반영
-    setTextEditer(false); // 수정 모드 종료
+  const [textEditer, setTextEditer] = useState(false); //false, true 변경을 통해 수정버튼 누를시, edit가 열리기 위한 기능
+  const [newText, setNewText] = useState(text); // 입력할 새 텍스트
+  const onUpdate = () => updateTodo(id);
+  const onDelete = () => removeTodo(id);
+  const onCorrect = (e) => {
+    e.preventDefault();
+    correctTodo(id, newText);
+    setTextEditer(false); //수정을 다하고나면 다시 false로 변경을 하여 닫힘
   };
 
   return (

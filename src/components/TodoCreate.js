@@ -1,15 +1,22 @@
 import React, { useState } from "react";
 import useTodoStore from "../store/useTodoStore";
 import "../assets/css/TodoCreate.css";
+import { fetchTodos, createTodo } from "../service/api";
 
 function TodoCreate() {
-  const { createTodo } = useTodoStore();
+  const { setTodos } = useTodoStore();
   const [textEditer, setTextEditer] = useState(false); //추가버튼에 의해 form 시행여부
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(""); //입력한 값 저장.
 
-  const onSubmit = (e) => {
+  //api 의 createTodo 기능을 onsubmit의 이용하여 받아온 값 value로 사영
+  //fetchTodos()를 사용하여. 업데이트된 할일 목록을 반환받고, 받은 값을 result로 정의하여
+  //setTodos()에 위 결과값을 호출하여 상태를 업데이트합니다. 이렇게 하면 컴포넌트가 최신 할 일 목록으로 다시 렌더링
+  const onSubmit = async (e) => {
     e.preventDefault();
-    createTodo(value);
+    await createTodo(value);
+    const result = await fetchTodos();
+    setTodos(result);
+
     setValue("");
     setTextEditer(false);
   };

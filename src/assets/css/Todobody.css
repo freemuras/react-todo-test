@@ -1,55 +1,53 @@
 .todo-item {
-  background-color: #ffeb3b;
-  color: #000;
-  display: flex; /* flexbox를 사용하여 아이템을 가로로 배치 */
-  flex-wrap: wrap; /* 아이템이 가로 공간을 넘어가면 다음 줄로 넘어가게 설정 */
-  justify-content: space-between; /* 아이템 사이에 공간을 균일하게 분배 */
-  width: 450px;
-  height: auto;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  overflow-y: auto;
-  justify-content: center;
-  align-items: center;
+  margin-top: 10px;
+  background-color: #ffeb3b; /* 배경색을 밝은 노란색으로 설정 */
+  color: #000; /* 글자 색상을 검정색으로 설정 */
+  display: flex; /* Flexbox를 사용하여 내부 요소 배치 */
+  flex-wrap: wrap; /* 자식 요소들이 공간이 부족할 경우 다음 줄로 감싸서 배치 */
+  justify-content: space-between; /* 자식 요소 간의 여백을 두어 양 끝에 배치 */
+  width: 450px; /* 너비를 450px로 설정 */
+  height: auto; /* 높이는 자동으로 조정 */
+  padding: 10px; /* 내부 여백을 10px로 설정 */
+  border-radius: 8px; /* 모서리를 둥글게 하기 위해 테두리 반경을 8px로 설정 */
+  margin-bottom: 8px; /* 아래쪽 여백을 8px로 설정 */
+  overflow-y: auto; /* 세로 방향으로 내용이 넘칠 경우 스크롤 추가 */
+  align-items: center; /* 내부 요소들을 세로 방향으로 중앙 정렬 */
 }
 
 .todo-text {
-  text-align: left;
-  font-size: 18px;
-  flex: 1;
-  margin-right: 10px;
-  margin-left: 15px;
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+  font-size: 18px; /* 글자 크기를 18px로 설정 */
+  flex: 1; /* 가능한 공간을 모두 차지하게 함 (유연하게 크기 조정) */
+  margin-right: 10px; /* 오른쪽 여백을 10px로 설정 */
+  margin-left: 15px; /* 왼쪽 여백을 15px로 설정 */
 }
 
 .todo-buttons {
-  background-color: #fff;
-  width: calc(2.5em / 0.7);
-  height: calc(2.5em / 0.7);
-  display: flex;
-  gap: 5px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 2px 2px 5px #000000;
+  background-color: #fff; /* 버튼의 배경색을 흰색으로 설정 */
+  margin-left: 5px;
+  width: calc(2.5em / 0.7); /* 버튼의 너비 계산 */
+  height: calc(2.5em / 0.7); /* 버튼의 높이 계산 */
+  display: flex; /* Flexbox를 사용하여 내부 요소 배치 */
+  gap: 5px; /* 내부 요소 간의 간격을 5px로 설정 */
+  border-radius: 50%; /* 버튼을 원형으로 만들기 위해 테두리 반경을 50%로 설정 */
+  justify-content: center; /* 내부 요소를 가로 방향으로 중앙 정렬 */
+  align-items: center; /* 내부 요소를 세로 방향으로 중앙 정렬 */
+  box-shadow: 2px 2px 5px #000000; /* 그림자를 추가하여 입체감 부여 */
 }
 
 .input {
-  padding: 12px;
-  border-radius: 4px;
-  border: 1px solid #dee2e6;
-  width: 260px;
-  outline: none;
-  font-size: 18px;
-  box-sizing: border-box;
+  padding: 12px; /* 내부 여백을 12px로 설정 */
+  border-radius: 4px; /* 모서리를 둥글게 하기 위해 테두리 반경을 4px로 설정 */
+  border: 1px solid #dee2e6; /* 연한 회색 테두리를 추가 */
+  width: 300px; /* 너비를 260px로 설정 */
+  outline: none; /* 포커스 시 외곽선 제거 */
+  font-size: 18px; /* 글자 크기를 18px로 설정 */
 }
 
 .insert-form {
-  background: #ffeb3b;
-  padding: 3px;
-  width: 400px;
-  border-top: 1px solid #e9ecef;
-  display: flex;
-  justify-content: space-between; /* 버튼 간의 간격 설정 */
+  background: #ffeb3b; /* 배경색을 밝은 노란색으로 설정 */
+  padding: 3px; /* 내부 여백을 3px로 설정 */
+  width: 430px; /* 너비를 400px로 설정 */
+  border-top: 1px solid #e9ecef; /* 상단에 연한 회색 테두리 추가 */
+  display: flex; /* Flexbox를 사용하여 내부 요소 배치 */
 }
